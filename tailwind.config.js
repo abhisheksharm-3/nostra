@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
+      sans: ['Open Sans', 'sans-serif'],
       serif: ['Cormorant Upright', 'serif'],
     },
   },
