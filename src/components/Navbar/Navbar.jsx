@@ -43,7 +43,7 @@ const Navbar = () => {
         </a>
         <div className="w-px h-[30px] bg-white" />
         <a
-          href="/"
+          href="#booking"
           className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
         >
           Book Table
@@ -80,6 +80,24 @@ const Navbar = () => {
                 <a href="#contacts">Contact</a>
               </li>
             </ul>
+            <div
+              className="font-serif text-orange-400 text-[23px] flex justify-center items-center"
+              onClick={() => setToggleMenu(false)}
+            >
+              <a
+                href="#login"
+                className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
+              >
+                Log In / SignUp
+              </a>
+              <div className="w-px h-[30px] bg-white" />
+              <a
+                href="#booking"
+                className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
+              >
+                Book Table
+              </a>
+            </div>
           </div>
         )}
       </div>
