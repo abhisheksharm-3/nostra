@@ -13,35 +13,35 @@ const Footer = () => (
     <Newsletter />
 
     <div className="w-full flex justify-between sm:flex-col lg:flex-row sm:p-0 lg:items-start mt-20 lg:py-0 lg:px-8">
-      <div className="flex flex-1 w-full lg:w-0 my-8 mx-0 lg:m-4 text-center">
+      <div className="flex flex-1 flex-col w-full lg:w-0 my-8 mx-0 lg:m-4 text-center">
         <h1 className="font-serif text-[#ACACAC] font-normal tracking-[0.04em] capitalize text-[32px] leading-[41.6px] mb-4">Contact Us</h1>
         <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">9 W 53rd St, New York, NY 10019, USA</p>
         <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">+1 212-344-1230</p>
         <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">+1 212-555-1230</p>
       </div>
 
-      <div className="flex flex-1 w-full lg:w-0 my-8 mx-0 lg:m-4 text-center">
+      <div className="flex flex-1 flex-col justify-center items-center w-full lg:w-0 my-8 mx-0 lg:m-4 text-center">
         <img src={images.nostra} alt="footer_logo" className='w-[210px] mb-3'/>
         <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">&quot;The best way to find yourself is to lose yourself in the service of others.&quot;</p>
         <img src={images.spoon} className="w-[45px] mt-[15]" />
-        <div className="mt-2">
+        <div className="mt-2 flex">
           <FiFacebook className='text-[#acacac] m-2 text-[24px] cursor-pointer hover:text-orange-400'/>
           <FiTwitter className='text-[#acacac] m-2 text-[24px] cursor-pointer hover:text-orange-400'/>
           <FiInstagram className='text-[#acacac] m-2 text-[24px] cursor-pointer hover:text-orange-400'/>
         </div>
       </div>
 
-      <div className="flex flex-1 w-full lg:w-0 my-8 mx-0 lg:m-4 text-center">
+      <div className="flex flex-1 flex-col w-full lg:w-0 my-8 mx-0 lg:m-4 text-center">
         <h1 className="font-serif text-[#ACACAC] font-normal tracking-[0.04em] capitalize text-[32px] leading-[41.6px] mb-4">Working Hours</h1>
-        <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px] mb-12">Monday-Friday:</p>
-        <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">08:00 am - 12:00 am</p>
-        <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px] mb-12">Saturday-Sunday:</p>
+        <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">Monday-Friday:</p>
+        <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px] mb-12">08:00 am - 12:00 am</p>
+        <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">Saturday-Sunday:</p>
         <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">07:00 am - 11:00 pm</p>
       </div>
     </div>
 
     <div className="mt-12">
-      <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">2021 Gericht. All Rights reserved.</p>
+      <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">2023 Nostra. All Rights reserved.</p>
     </div>
 
   </div>

@@ -5,7 +5,7 @@ import SubHeading from '../SubHeading/SubHeading';
 import './Newsletter.css';
 
 const Newsletter = () => (
-  <div className="py-8 px-0 border-none lg:px-16 bg-[#090909] lg:border lg:border-[1] lg:border-orange-400">
+  <div className="py-8 px-0 lg:px-16 bg-[#090909] lg:border lg:border-orange-400">
     <div className="text-center">
       <SubHeading title="Newsletter" />
       <h1 className="text-[45px] leading-[70px] font-serif text-orange-400 lg:text-[64px] lg:leading-[83.2px] tracking-[0.04em] capitalize">Subscribe To Our Newsletter</h1>
