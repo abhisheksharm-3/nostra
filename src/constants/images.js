@@ -20,6 +20,11 @@ import award05 from '../assets/award05.png';
 import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
 import nostra from '../assets/nostra.png';
+import beer from '../assets/beer.png';
+import c1 from '../assets/c1.png';
+import c2 from '../assets/c2.png';
+import c3 from '../assets/c3.png';
+import c4 from '../assets/c4.png';
 
 export default {
   bg,
@@ -44,4 +49,9 @@ export default {
   sign,
   quote,
   nostra,
+  beer,
+  c1,
+  c2,
+  c3,
+  c4,
 };

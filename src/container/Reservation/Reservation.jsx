@@ -82,7 +82,7 @@ const Reservation = () => {
             </div>
 
             <div>
-              <div className="radio-button-container justify-center mt-8">
+              <div className="radio-button-container flex-wrap justify-center mt-8">
                 <div className="radio-button">
                   <input
                     type="radio"
