@@ -5,8 +5,12 @@ import { images } from "../../constants";
 const Testimonials = () => {
   return (
     <div className="bg-[#090909]">
-        <div className="flex justify-end">
-        <img src={images.logo} alt="logo" className="w-[15%] lg:w-[7%] ml-auto" />
+      <div className="flex justify-end">
+        <img
+          src={images.logo}
+          alt="logo"
+          className="w-[15%] lg:w-[7%] ml-auto"
+        />
       </div>
       <div className="flex justify-center items-center flex-col">
         <h3 className="font-serif text-[#acacac] text-[23px] font-bold tracking-wider leading-7 mb-2">
@@ -23,8 +27,9 @@ const Testimonials = () => {
             <img src={images.c1} alt="" />
             <div className="flex flex-col justify-center items-center lg:items-start mt-8 lg:mt-0 lg:ml-8">
               <p className="font-serif text-[#ACACAC] font-normal tracking-[0.04em] capitalize text-[16px] leading-[28px] text-center lg:text-left">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                maiores porro ea magni beatae aliquid par!
+                Impeccable service, exquisite flavors, hidden gem. A culinary
+                masterpiece that surpasses expectations. A must-visit for fine
+                dining enthusiasts.
               </p>
               <h1 className="font-serif text-[32px] text-orange-400">
                 Wade Warren
@@ -40,8 +45,9 @@ const Testimonials = () => {
             <img src={images.c2} alt="" />
             <div className="flex flex-col justify-center items-center lg:items-start mt-8 lg:mt-0 lg:ml-8">
               <p className="font-serif text-[#ACACAC] font-normal tracking-[0.04em] capitalize text-[16px] leading-[28px] text-center lg:text-left">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                maiores porro ea magni beatae aliquid par!
+                Nostra's captivating ambiance, exceptional service, and
+                exquisite flavors make it a standout destination for discerning
+                diners.
               </p>
               <h1 className="font-serif text-[32px] text-orange-400">
                 Jane Cooper
@@ -57,8 +63,8 @@ const Testimonials = () => {
             <img src={images.c3} alt="" />
             <div className="flex flex-col justify-center items-center lg:items-start mt-8 lg:mt-0 lg:ml-8">
               <p className="font-serif text-[#ACACAC] font-normal tracking-[0.04em] capitalize text-[16px] leading-[28px] text-center lg:text-left">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                maiores porro ea magni beatae aliquid par!
+                Nostra redefines fine dining with its impeccable service,
+                exquisite flavors, and an ambiance that enchants all who visit.
               </p>
               <h1 className="font-serif text-[32px] text-orange-400">
                 Robert Fox
@@ -74,8 +80,8 @@ const Testimonials = () => {
             <img src={images.c4} alt="" />
             <div className="flex flex-col justify-center items-center lg:items-start mt-8 lg:mt-0 lg:ml-8">
               <p className="font-serif text-[#ACACAC] font-normal tracking-[0.04em] capitalize text-[16px] leading-[28px] text-center lg:text-left">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                maiores porro ea magni beatae aliquid par!
+                A hidden gem with impeccable service, delightful flavors, and an
+                enchanting atmosphere that leaves a lasting impression.
               </p>
               <h1 className="font-serif text-[32px] text-orange-400">
                 Brooklyn Simmons
