@@ -10,6 +10,8 @@ import SpecialMenu from './Menu/SpecialMenu';
 import Reservation from './Reservation/Reservation.jsx';
 import MenuPage from './MenuPage/MenuPage';
 import Testimonials from './Testimony/Testimonials';
+import ServiceQuality from './ServiceQuality/ServiceQuality';
+import HappyHours from './HappyHours/HappyHours';
 
 export {
   AboutUs,
@@ -24,4 +26,6 @@ export {
   Reservation,
   MenuPage,
   Testimonials,
+  ServiceQuality,
+  HappyHours,
 };

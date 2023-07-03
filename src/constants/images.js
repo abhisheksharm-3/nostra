@@ -25,6 +25,7 @@ import c1 from '../assets/c1.png';
 import c2 from '../assets/c2.png';
 import c3 from '../assets/c3.png';
 import c4 from '../assets/c4.png';
+import happy from '../assets/happy.png'
 
 export default {
   bg,
@@ -54,4 +55,5 @@ export default {
   c2,
   c3,
   c4,
+  happy,
 };

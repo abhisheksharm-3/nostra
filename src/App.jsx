@@ -1,24 +1,17 @@
 import React from 'react';
 
-import { AboutUs, Chef, FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu, Reservation, MenuPage, Testimonials } from './container';
-import { Navbar } from './components';
+import Homepage from './pages/Homepage'
+import Services from './pages/Services';
+import { Routes, Route } from "react-router-dom";
 import './App.css';
 
 const App = () => (
   <div>
-    <Navbar />
-    <Header />
-    <AboutUs />
-    <Reservation />
-    <MenuPage />
-    <SpecialMenu />
-    <Chef />
-    <Testimonials />
-    <Intro />
-    <Laurels />
-    <Gallery />
-    <FindUs />
-    <Footer />
+    <Routes>
+      <Route path='/' element={<Homepage />} />
+      <Route path='/services' element={<Services />} />
+    </Routes>
+    {/* <Homepage /> */}
   </div>
 );
 

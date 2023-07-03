@@ -11,7 +11,7 @@ const Header = () => (
     <SubHeading title = 'Chase the new flavour'/>
     <h1 className='font-serif text-orange-400 font-bold tracking-[0.04em] uppercase leading-[60px] text-[40px] sm:leading-[77px] sm:text-[60px] 2xl:text-[90px] 2xl:leading-[117px]'>Where fine dining meets modern minimalism.</h1>
     <p className="font-sans my-8 mx-0 text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">Where elegance meets minimalism, and culinary secrets unfold. Embark on a mystical dining experience, reimagining the art of fine cuisine.</p>
-    <button type='button' className='bg-[#F5EFDB] text-[#090909] font-serif font-bold tracking-[0.04em] leading-[28px] py-2 px-6 rounded-[1px] border-none cursor-pointer outline-none'>Explore Menu</button>
+    <button type='button' className='bg-[#F5EFDB] text-[#090909] font-serif font-bold tracking-[0.04em] leading-[28px] py-2 px-6 rounded-[1px] border-none cursor-pointer outline-none ease-in duration-200 hover:bg-orange-400'>Explore Menu</button>
     </div>
     <div className="">
     <img src={images.welcome} alt="header_img" className='flex flex-1 xl:w-[60%] lg:2-[80%] justify-center items-center mt-5 ml-0 mr-0 mb-0 xl:ml-8'/>
