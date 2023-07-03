@@ -1,7 +1,7 @@
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import images from "../../constants/images";
 
@@ -23,10 +23,10 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
-          <a href="#about">About</a>
+          <Link to="/about">About</Link>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
-          <a href="#hmenu">Menu</a>
+        <Link to="/bar">Bar</Link>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
           <Link to="/services">Our Services</Link>
@@ -35,7 +35,7 @@ const Navbar = () => {
           <a href="#awards">Awards</a>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
-          <a href="#contacts">Contacts</a>
+        <Link to="/contact">Contact</Link>
         </li>
       </ul>
       <div className="hidden xl:flex justify-end items-center">
@@ -61,30 +61,30 @@ const Navbar = () => {
         />
 
         {toggleMenu && (
-          <div className="flex flex-col fixed w-full h-screen top-0 left-0 bg-[#090909] ease-in duration-500 z-5 lg:hidden " >
+          <div className="flex flex-col fixed w-full h-screen top-0 left-0 bg-[#090909] ease-in duration-500 z-5 lg:hidden ">
             <MdOutlineRestaurantMenu
               fontSize={27}
               className="hover:text-orange-400 cursor-pointer absolute top-5 right-5"
               onClick={() => setToggleMenu(false)}
             />
             <ul className="">
-            <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
+              <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
                 <Link to="/">Home</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
-                <a href="#about">About</a>
+                <Link to="/about">About</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
-                <a href="#hmenu">Menu</a>
+              <Link to="/bar">Bar</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
                 <Link to="/services">Our Services</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
-                <a href="#awards">Awards</a>
+              <Link to="#awards">Awards</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
-                <a href="#contacts">Contact</a>
+              <Link to="/contact">Contact</Link>
               </li>
             </ul>
             <div
