@@ -12,6 +12,12 @@ import MenuPage from './MenuPage/MenuPage';
 import Testimonials from './Testimony/Testimonials';
 import ServiceQuality from './ServiceQuality/ServiceQuality';
 import HappyHours from './HappyHours/HappyHours';
+import AboutBar from './AboutBar/AboutBar';
+import Poison from './PoisonPage/Poison';
+import Map from './Map/Map';
+import ReachFile from './ReachUs/ReachFile';
+import Stats from './Stats/Stats';
+import InfoVideo from './InfoVideo/InfoVideo';
 
 export {
   AboutUs,
@@ -28,4 +34,10 @@ export {
   Testimonials,
   ServiceQuality,
   HappyHours,
+  AboutBar,
+  Poison,
+  Map,
+  ReachFile,
+  Stats,
+  InfoVideo,
 };

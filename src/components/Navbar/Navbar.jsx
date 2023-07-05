@@ -61,7 +61,7 @@ const Navbar = () => {
         />
 
         {toggleMenu && (
-          <div className="flex flex-col fixed w-full h-screen top-0 left-0 bg-[#090909] ease-in duration-500 z-5 lg:hidden ">
+          <div className="flex flex-col fixed w-full h-screen top-0 left-0 bg-[#090909] ease-in duration-500 z-5 lg:hidden z-30">
             <MdOutlineRestaurantMenu
               fontSize={27}
               className="hover:text-orange-400 cursor-pointer absolute top-5 right-5"
@@ -75,7 +75,7 @@ const Navbar = () => {
                 <Link to="/about">About</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
-              <Link to="/bar">Bar</Link>
+                <Link to="/bar">Bar</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
                 <Link to="/services">Our Services</Link>

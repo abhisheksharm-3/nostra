@@ -26,6 +26,16 @@ import c2 from '../assets/c2.png';
 import c3 from '../assets/c3.png';
 import c4 from '../assets/c4.png';
 import happy from '../assets/happy.png'
+import bar from '../assets/bar.png';
+import bar1 from '../assets/bar1.png';
+import bar2 from '../assets/bar2.png';
+import beerbar from '../assets/beerbar.png';
+import cocktail from '../assets/cocktail.png';
+import wine from '../assets/wine.png';
+import map from '../assets/map.png'
+import storefront from '../assets/storefront.png'
+import barfront from '../assets/barfront.png'
+import line from '../assets/line.svg'
 
 export default {
   bg,
@@ -56,4 +66,14 @@ export default {
   c3,
   c4,
   happy,
+  bar,
+  bar1,
+  bar2,
+  beerbar,
+  cocktail,
+  wine,
+  map,
+  storefront,
+  barfront,
+  line,
 };

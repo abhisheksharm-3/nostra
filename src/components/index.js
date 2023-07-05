@@ -4,6 +4,7 @@ import FooterOverlay from './Footer/FooterOverlay';
 import MenuItem from './Menuitem/MenuItem';
 import Navbar from './Navbar/Navbar';
 import HeaderImage from './Header/HeaderImage';
+import BarHeader from './Header/BarHeader';
 
 export {
   SubHeading,
@@ -12,4 +13,5 @@ export {
   MenuItem,
   Navbar,
   HeaderImage,
+  BarHeader,
 };
