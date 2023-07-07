@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import ConfettiExplosion from 'react-confetti-explosion';
 
 const Thanks = (props) => {
   const location = useLocation();
@@ -22,6 +23,7 @@ const Thanks = (props) => {
 
   return (
     <div className="bg-[#090909] w-full flex flex-col items-center justify-center gap-12 h-screen">
+        <ConfettiExplosion duration={3000}/>
       <h1 className="font-serif text-center text-orange-400 text-[50px] lg:text-[128px] font-bold capitalize leading-10 tracking-wide lg:pb-4">
         Thank You!
       </h1>
