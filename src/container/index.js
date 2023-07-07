@@ -18,6 +18,7 @@ import Map from './Map/Map';
 import ReachFile from './ReachUs/ReachFile';
 import Stats from './Stats/Stats';
 import InfoVideo from './InfoVideo/InfoVideo';
+import Thanks from './ThankYouPage/Thanks';
 
 export {
   AboutUs,
@@ -40,4 +41,5 @@ export {
   ReachFile,
   Stats,
   InfoVideo,
+  Thanks,
 };

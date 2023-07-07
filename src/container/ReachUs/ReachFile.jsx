@@ -3,6 +3,7 @@ import React from "react";
 import { images } from "../../constants";
 
 const ReachFile = () => {
+  
   return (
     <div className="relative bg-[url(./assets/bg.png)] bg-center bg-cover bg-no-repeat bg-fixed flex justify-center items-center py-16 px-8 sm:p-16 lg:py-16 lg:px-24 gap-10">
       <form className="px-8">
