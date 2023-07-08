@@ -120,7 +120,7 @@ const Reservation = () => {
                   <input
                     type="date"
                     id="date"
-                    className="bg-[#090909] text-[#ACACAC] border border-orange-300 rounded-sm"
+                    className="bg-[#090909] font-serif text-[#ACACAC] border border-orange-300 rounded-sm"
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
                   />
@@ -129,7 +129,7 @@ const Reservation = () => {
                   <input
                     type="time"
                     id="time"
-                    className="bg-[#090909] text-[#ACACAC] border border-orange-300 rounded-sm"
+                    className="bg-[#090909] font-serif text-[#ACACAC] border border-orange-300 rounded-sm"
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
                   />

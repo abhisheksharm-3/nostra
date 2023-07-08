@@ -8,7 +8,10 @@ import "./SpecialMenu.css";
 const SpecialMenu = () => (
   <div className="bg-[#090909] flex flex-col jusify-center items-center py-16 px-8 sm:p-16 lg:py-16 lg:px-24" id="menu">
     <div className="mb-8 text-center">
-      <SubHeading title="Modern Fine Dining Revelations" />
+    <div className='mb-4 flex flex-col items-center justify-center'>
+    <p className="font-serif text-white font-bold tracking-[0.04em] uppercase leading-[30px] text-[19px] sm:text-[21px] 2xl:text-[37px] 2xl:leading-[67px]">Modern Fine Dining Revelations</p>
+    <img src={images.spoon} alt='spoon image' />
+  </div>
       <h1 className="text-orange-400 font-serif text-[45px] leading-[70px] lg:text-[64px] lg:leading-[83.2px] tracking-[0.04em] capitalize">Today&apos;s Special</h1>
     </div>
 

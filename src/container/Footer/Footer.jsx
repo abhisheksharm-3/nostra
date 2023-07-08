@@ -34,7 +34,7 @@ const Footer = () => (
       <div className="flex flex-1 flex-col w-full lg:w-0 my-8 mx-0 lg:m-4 text-center">
         <h1 className="font-serif text-[#ACACAC] font-normal tracking-[0.04em] capitalize text-[32px] leading-[41.6px] mb-4">Working Hours</h1>
         <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">Monday-Friday:</p>
-        <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px] mb-12">08:00 am - 12:00 am</p>
+        <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px] mb-12">09:00 am - 12:00 am</p>
         <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">Saturday-Sunday:</p>
         <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">07:00 am - 11:00 pm</p>
       </div>

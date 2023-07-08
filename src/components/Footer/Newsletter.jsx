@@ -2,12 +2,17 @@ import React from 'react';
 
 import SubHeading from '../SubHeading/SubHeading';
 
+import { images } from '../../constants';
+
 import './Newsletter.css';
 
 const Newsletter = () => (
   <div className="py-8 px-0 lg:px-16 bg-[#090909] lg:border lg:border-orange-400">
     <div className="text-center">
-      <SubHeading title="Newsletter" />
+    <div className='mb-4 flex flex-col items-center justify-center'>
+    <p className="font-serif text-white font-bold tracking-[0.04em] uppercase leading-[30px] text-[19px] sm:text-[21px] 2xl:text-[37px] 2xl:leading-[67px]">Newsletter</p>
+    <img src={images.spoon} alt='spoon image' />
+  </div>
       <h1 className="text-[45px] leading-[70px] font-serif text-orange-400 lg:text-[64px] lg:leading-[83.2px] tracking-[0.04em] capitalize">Subscribe To Our Newsletter</h1>
       <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">And never miss latest Updates!</p>
     </div>

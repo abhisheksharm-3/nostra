@@ -17,9 +17,9 @@ const Stats = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center gap-16 pb-16">
         <div className="flex flex-col">
           <p className="text-center lg:text-left lg:w-[523px] text-neutral-400 text-[16px] font-normal leading-7 tracking-wider pb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-            pharetra adipiscing ultrices vulputate posuere tristique. In sed
-            odio nec aliquet eu proin mauris et.
+            Nostra, a decade-old fine dining establishment, continues to
+            captivate customers with its minimal and modern ambiance,
+            exceptional gastronomy, and impeccable service.
           </p>
           <img src={images.storefront} alt="store front" className="" />
         </div>
