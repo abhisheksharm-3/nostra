@@ -46,7 +46,7 @@ const Footer = () => (
       </div>
     </div>
 
-    <div className="mt-12" data-aos="fade-up">
+    <div className="mt-12">
       <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px] text-center">2023 Nostra. All Rights reserved.</p>
     </div>
 
