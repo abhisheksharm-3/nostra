@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { images } from "../../constants";
 import { Thanks } from "../";
 import "./reservation.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
 
 const Reservation = () => {
   const [name, setName] = useState("");
@@ -89,7 +92,7 @@ const Reservation = () => {
           <div className="mt-[10px] mb-[30px]">
             <img src={images.spoon} alt="spoon img" className="w-[45px]" />
           </div>
-          <h3 className="text-center font-serif text-orange-400 text-[40px] lg:text-[64px] font-semibold capitalize lg:leading-10 tracking-wider lg:tracking-widest">
+          <h3 className="text-center font-serif text-orange-400 text-[40px] lg:text-[64px] font-semibold capitalize lg:leading-10 tracking-wider lg:tracking-widest" data-aos="flip-up">
             Book a table
           </h3>
           <div>

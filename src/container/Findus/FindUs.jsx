@@ -2,13 +2,19 @@ import React from "react";
 
 import { SubHeading } from "../../components";
 import { images } from "../../constants";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+  duration: 1000,
+  offset: 100,
+});
 
 const FindUs = () => (
   <div
     className="bg-[url('./assets/bg.png')] bg-center bg-cover bg-repeat bg-fixed flex justify-between items-center min-h-screen flex-col lg:flex-row py-16 px-8 sm:p-16 lg:py-16 lg:px-24"
     id="contact"
   >
-    <div className="flex flex-1 w-full justify-center items-start flex-col ">
+    <div className="flex flex-1 w-full justify-center items-start flex-col " data-aos="fade-up">
       <SubHeading title="Contact" />
       <h1 className="text-orange-400 font-serif text-[45px] leading-[70px] lg:text-[64px] lg:leading-[83.2px] tracking-[0.04em] capitalize mb-12">
         Find Us
@@ -35,7 +41,7 @@ const FindUs = () => (
       </button>
     </div>
 
-    <div className="flex flex-1 w-full justify-center items-center mt-20 lg:mt-0 lg:ml-8">
+    <div className="flex flex-1 w-full justify-center items-center mt-20 lg:mt-0 lg:ml-8" data-aos="fade-down">
       <img src={images.findus} alt="finus_img" className="w-full lg:w-[80%]" />
     </div>
   </div>

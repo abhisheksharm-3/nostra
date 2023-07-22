@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 
 import images from "../../constants/images";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
+
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -18,7 +22,7 @@ const Navbar = () => {
           alt="app logo"
         />
       </div>
-      <ul className="hidden lg:flex flex-1 justify-center items-center">
+      <ul className="hidden lg:flex flex-1 justify-center items-center" data-aos="fade-down">
         <li className="py-0 px-4 cursor-pointer hover:text-white">
           <Link to="/">Home</Link>
         </li>

@@ -3,13 +3,19 @@ import React from "react";
 import { SubHeading } from "../../components";
 import { images } from "../../constants";
 import "./Chef.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+  duration: 1000,
+  offset: 100,
+});
 
 const Chef = () => (
   <div className="bg-[url(./assets/bg.png)] bg-center bg-cover bg-repeat bg-fixed lg:flex lg:justify-between lg:items-center min-h-screen py-16 px-8 sm:p-16 lg:py-16 lg:ox-24">
-    <div className="flex flex-1 w-full items-center justify-start mb-20 lg:mr-8">
+    <div className="flex flex-1 w-full items-center justify-start mb-20 lg:mr-8" data-aos="fade-right">
       <img src={images.chef} alt="chef image" className="w-[100%] lg:w-[80%]" />
     </div>
-    <div className="flex flex-1 w-full justify-center items-start flex-col">
+    <div className="flex flex-1 w-full justify-center items-start flex-col" data-aos="fade-left">
       <SubHeading title="Chef's Word" />
       <h1 className="text-orange-400 font-serif text-[45px] leading-[70px] lg:text-[64px] lg:leading-[83.2px] tracking-[0.04em] capitalize">
         What we believe in

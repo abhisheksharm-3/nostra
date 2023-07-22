@@ -5,6 +5,12 @@ import { FiFacebook, FiTwitter, FiInstagram } from 'react-icons/fi';
 import { FooterOverlay, Newsletter } from '../../components';
 import { images } from '../../constants';
 import './Footer.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+  duration: 1000,
+  offset: 100,
+});
 
 
 const Footer = () => (
@@ -12,7 +18,7 @@ const Footer = () => (
     <FooterOverlay />
     <Newsletter />
 
-    <div className="w-full flex justify-between flex-col lg:flex-row sm:p-0 lg:items-start mt-20 lg:py-0 lg:px-8">
+    <div className="w-full flex justify-between flex-col lg:flex-row sm:p-0 lg:items-start mt-20 lg:py-0 lg:px-8" data-aos="fade-up">
       <div className="flex flex-1 flex-col w-full lg:w-0 my-8 mx-0 lg:m-4 text-center">
         <h1 className="font-serif text-[#ACACAC] font-normal tracking-[0.04em] capitalize text-[32px] leading-[41.6px] mb-4">Contact Us</h1>
         <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">9 W 53rd St, New York, NY 10019, USA</p>
@@ -40,7 +46,7 @@ const Footer = () => (
       </div>
     </div>
 
-    <div className="mt-12">
+    <div className="mt-12" data-aos="fade-up">
       <p className="font-sans text-[#ACACAC] font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px] text-center">2023 Nostra. All Rights reserved.</p>
     </div>
 

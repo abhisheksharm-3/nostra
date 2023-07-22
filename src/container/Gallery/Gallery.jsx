@@ -7,6 +7,12 @@ import {
 
 import { SubHeading } from "../../components";
 import { images } from "../../constants";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+  duration: 1000,
+  offset: 100,
+});
 
 import "./Gallery.css";
 
@@ -25,7 +31,7 @@ const Gallery = () => {
 
   return (
     <div className="bg-[#090909] flex justify-center items-center flex-col lg:flex-row pl-8 sm:pl-16 py-16 lg:pr-0 lg:pl-24">
-      <div className="flex flex-1 justify-center items-start flex-col min-w-full lg:min-w-[500px] pr-8">
+      <div className="flex flex-1 justify-center items-start flex-col min-w-full lg:min-w-[500px] pr-8" data-aos="fade-up">
         <SubHeading title="Instagram" />
         <h1 className="text-orange-400 font-serif text-[45px] leading-[70px] lg:text-[64px] lg:leading-[83.2px] tracking-[0.04em] capitalize">
           Photo Gallery

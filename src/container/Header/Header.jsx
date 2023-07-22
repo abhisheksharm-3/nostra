@@ -1,4 +1,10 @@
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+AOS.init({
+  duration: 1000,
+  offset: 100,
+});
 
 import {images} from '../../constants'
 
@@ -7,7 +13,7 @@ import { SubHeading } from '../../components';
 
 const Header = () => (
   <div className='bg-[#090909] flex flex-col lg:flex-row justify-start lg:gap-[200px] items-center min-h-screen py-16 px-8 sm:p-16 lg:py-16 lg:px-24' id='home'>
-    <div className="flex flex-1 flex-col w-full items-start justify-center">
+    <div className="flex flex-1 flex-col w-full items-start justify-center" data-aos="fade-up">
     {/* <div className="origin-top-left -rotate-90 text-white text-[18px] font-normal leading-loose tracking-wider">#Bar</div>
     <div className="origin-top-left -rotate-90 text-white text-[18px] font-normal leading-loose tracking-wider">#Gericht</div> */}
     <SubHeading title = 'Chase the new flavour'/>

@@ -1,6 +1,13 @@
 import React from "react";
 import { images } from "../../constants";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+AOS.init({
+  duration: 1000,
+  offset: 100,
+});
+
 import "./AboutUs.css";
 
 const AboutUs = () => (
@@ -8,7 +15,7 @@ const AboutUs = () => (
     className="relative bg-[url(./assets/bg.png)] bg-center bg-cover bg-no-repeat bg-fixed flex justify-center items-center py-16 px-8 sm:p-16 lg:py-16 lg:px-24"
     id="about"
   >
-    <div className="flex justify-center items w-full z-2 flex-col lg:flex-row">
+    <div className="flex justify-center items w-full z-2 flex-col lg:flex-row" data-aos="fade-up">
       <div className="flex flex-1 justify-end items-end flex-col text-right">
         <h1 className="font-serif text-[#ACACAC] text-[45px] lg:text-[68px] leading-[70px] lg:leading-[83.2px] tracking-[0.04em] uppercase">About Us</h1>
         <img src={images.spoon} alt="about_spoon" className="w-[45px]" />
