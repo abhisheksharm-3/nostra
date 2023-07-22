@@ -8,6 +8,11 @@ import images from "../../constants/images";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
+AOS.init({
+  duration: 1000,
+  offset: 100,
+});
+
 
 import "./Navbar.css";
 
@@ -20,6 +25,7 @@ const Navbar = () => {
           className="w-[110px] lg:w-[190px]"
           src={images.nostra}
           alt="app logo"
+          data-aos="fade-down"
         />
       </div>
       <ul className="hidden lg:flex flex-1 justify-center items-center" data-aos="fade-down">
@@ -46,18 +52,20 @@ const Navbar = () => {
         <a
           href="#login"
           className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
+          data-aos="fade-down"
         >
           Log In / SignUp
         </a>
-        <div className="w-px h-[30px] bg-white" />
+        <div className="w-px h-[30px] bg-white" data-aos="fade-up"/>
         <a
           href="#booking"
           className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
+          data-aos="fade-down"
         >
           Book Table
         </a>
       </div>
-      <div className="md:flex lg:hidden">
+      <div className="md:flex lg:hidden" data-aos="fade-up">
         <GiHamburgerMenu
           color="#ACACAC"
           fontSize={27}
@@ -65,7 +73,7 @@ const Navbar = () => {
         />
 
         {toggleMenu && (
-          <div className="flex flex-col fixed w-full h-screen top-0 left-0 bg-[#090909] ease-in duration-500 z-5 lg:hidden z-30">
+          <div className="flex flex-col fixed w-full h-screen top-0 left-0 bg-[#090909] ease-in duration-500 z-5 lg:hidden z-30" data-aos="fade-down">
             <MdOutlineRestaurantMenu
               fontSize={27}
               className="hover:text-orange-400 cursor-pointer absolute top-5 right-5"
