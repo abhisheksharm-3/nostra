@@ -1,11 +1,18 @@
 import React from 'react'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+  duration: 1000,
+  offset: 100,
+});
+
 import { images } from '../../constants'
 
 const HappyHours = () => {
   return (
     <div className='bg-[url(./assets/happy.png)] bg-center bg-cover bg-no-repeat w-max-screen h-screen'>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center" data-aos="fade-up">
             <h1 className="font-serif text-center text-orange-400 text-[50px] lg:text-[128px] font-bold capitalize leading-10 tracking-wider mt-80 lg:mt-72 2xl:mt-[365px]">
                 Happy Hours
             </h1>
