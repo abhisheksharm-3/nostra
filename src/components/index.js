@@ -5,6 +5,7 @@ import MenuItem from './Menuitem/MenuItem';
 import Navbar from './Navbar/Navbar';
 import HeaderImage from './Header/HeaderImage';
 import BarHeader from './Header/BarHeader';
+import Signup from './SignUp/Signup';
 
 export {
   SubHeading,
@@ -14,4 +15,5 @@ export {
   Navbar,
   HeaderImage,
   BarHeader,
+  Signup,
 };

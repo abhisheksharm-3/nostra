@@ -36,6 +36,8 @@ import map from '../assets/map.png'
 import storefront from '../assets/storefront.png'
 import barfront from '../assets/barfront.png'
 import line from '../assets/line.svg'
+import signup from '../assets/signup.jpg'
+import signupmobile from '../assets/signup-mobile.jpg'
 
 export default {
   bg,
@@ -76,4 +78,6 @@ export default {
   storefront,
   barfront,
   line,
+  signup,
+  signupmobile,
 };

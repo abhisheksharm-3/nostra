@@ -5,6 +5,7 @@ import Services from './pages/Services';
 import Aboutpage from './pages/Aboutpage';
 import Contact from './pages/Contact';
 import BarHome from './pages/BarHome';
+import { Signup } from './components';
 import { Thanks } from './container';
 import { Routes, Route } from "react-router-dom";
 import './App.css';
@@ -19,6 +20,7 @@ const App = () => (
       <Route path='/contact' element={<Contact />} />
       <Route path='/bar' element={<BarHome />} />
       <Route path='/thanks' element={<Thanks />} />
+      <Route path='/signup-login' element={<Signup />} />
     </Routes>
     {/* <Homepage /> */}
   </div>
