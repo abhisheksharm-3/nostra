@@ -50,7 +50,7 @@ const Navbar = () => {
       </ul>
       <div className="hidden xl:flex justify-end items-center">
         <a
-          href="/signup-login"
+          href="/userauth"
           className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
           data-aos="fade-down"
         >
@@ -104,7 +104,7 @@ const Navbar = () => {
               onClick={() => setToggleMenu(false)}
             >
               <a
-                href="/signup-login"
+                href="/userauth"
                 className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
               >
                 Log In / SignUp
