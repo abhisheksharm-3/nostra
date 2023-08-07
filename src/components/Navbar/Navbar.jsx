@@ -49,13 +49,13 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="hidden xl:flex justify-end items-center">
-        <a
-          href="/userauth"
+        <Link
+          to="/userauth"
           className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
           data-aos="fade-down"
         >
           Log In / SignUp
-        </a>
+        </Link>
         <div className="w-px h-[30px] bg-white" data-aos="fade-up"/>
         <a
           href="#booking"
@@ -103,12 +103,12 @@ const Navbar = () => {
               className="font-serif text-orange-400 text-[23px] flex justify-center items-center"
               onClick={() => setToggleMenu(false)}
             >
-              <a
-                href="/userauth"
+              <Link
+                to="/userauth"
                 className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
               >
                 Log In / SignUp
-              </a>
+              </Link>
               <div className="w-px h-[30px] bg-white" />
               <a
                 href="#booking"
