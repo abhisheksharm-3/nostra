@@ -110,6 +110,18 @@ const Reservation = () => {
                   />
                 </div>
                 <div>
+                <input
+                type="tel"
+                id="number"
+                name="number"
+                pattern="[0-9]{10}"
+                title="Please enter a valid 10-digit number"
+                placeholder="Mobile Number (10 digits)"
+                className="bg-[#090909] text-[#ACACAC] border border-orange-300 font-serif rounded-sm text-center"
+                required
+              />
+                </div>
+                <div>
                   <input
                     type="number"
                     id="numberOfPersons"
