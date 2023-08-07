@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Navbar from "../Navbar/Navbar";
 import { images } from "../../constants";
+
 const Signup = () => {
   const [showOtpForm, setShowOtpForm] = useState(false);
+  const numberInputRef = useRef(null);
 
   const handleProceed = () => {
     setShowOtpForm(true);
+    if (numberInputRef.current) {
+      numberInputRef.current.value = "";
+    }
   };
 
   return (
@@ -57,6 +62,7 @@ const Signup = () => {
                     title="Please enter a valid 10-digit number"
                     placeholder="Mobile Number (10 digits)"
                     className="bg-transparent border border-orange-400 font-serif py-2 px-4 text-[#ACACAC]"
+                    ref={numberInputRef}
                     required
                   />
                   <button
