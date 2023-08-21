@@ -13,7 +13,7 @@ const ReachFile = () => {
             id="name"
             name="name"
             placeholder="Full Name"
-            className="bg-transparent border border-orange-400 font-serif py-2 px-4"
+            className="bg-transparent border border-orange-400 font-serif py-2 px-4 text-[#acacac]"
             required
           />
 
@@ -22,7 +22,7 @@ const ReachFile = () => {
             id="email"
             name="email"
             placeholder="Email Address"
-            className="bg-transparent border border-orange-400 font-serif py-2 px-4"
+            className="bg-transparent border border-orange-400 font-serif py-2 px-4 text-[#acacac]"
             required
           />
 
@@ -30,7 +30,7 @@ const ReachFile = () => {
             id="message"
             name="message"
             placeholder="Message"
-            className="bg-transparent border border-orange-400 font-serif py-2 px-4"
+            className="bg-transparent border border-orange-400 font-serif py-2 px-4 text-[#acacac]"
             rows={6}
             required
           />
