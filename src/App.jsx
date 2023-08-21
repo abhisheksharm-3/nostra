@@ -5,6 +5,7 @@ import Services from './pages/Services';
 import Aboutpage from './pages/Aboutpage';
 import Contact from './pages/Contact';
 import BarHome from './pages/BarHome';
+import Page404 from './pages/Page404';
 import { Signup } from './components';
 import { Thanks } from './container';
 import { Routes, Route } from "react-router-dom";
@@ -21,6 +22,7 @@ const App = () => (
       <Route path='/bar' element={<BarHome />} />
       <Route path='/thanks' element={<Thanks />} />
       <Route path='/userauth' element={<Signup />} />
+      <Route path="*" element={<Page404 />} />
     </Routes>
     {/* <Homepage /> */}
   </div>
