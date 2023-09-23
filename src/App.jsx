@@ -3,14 +3,14 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import Loader from './components/Loader/Loader'
-import { Signup } from './components';
 
-const Homepage = lazy(() => import('./pages/Homepage'));
+import Homepage from './pages/Homepage'
 const Services = lazy(() => import('./pages/Services'));
 const Aboutpage = lazy(() => import('./pages/Aboutpage'));
 const Contact = lazy(() => import('./pages/Contact'));
 const BarHome = lazy(() => import('./pages/BarHome'));
 const Page404 = lazy(() => import('./pages/Page404'));
+const Signup = lazy(() => import('./components/SignUp/Signup'));
 const Thanks = lazy(() => import('./container/ThankYouPage/Thanks'));
 
 const App = () => (
