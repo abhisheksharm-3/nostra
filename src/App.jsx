@@ -10,7 +10,7 @@ const Aboutpage = lazy(() => import('./pages/Aboutpage'));
 const Contact = lazy(() => import('./pages/Contact'));
 const BarHome = lazy(() => import('./pages/BarHome'));
 const Page404 = lazy(() => import('./pages/Page404'));
-const Signup = lazy(() => import('./components/Signup/Signup'));
+const Signup = lazy(() => import('./components/Signup'));
 const Thanks = lazy(() => import('./container/ThankYouPage/Thanks'));
 
 const App = () => (
