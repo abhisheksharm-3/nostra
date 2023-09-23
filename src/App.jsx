@@ -4,14 +4,14 @@ import "./App.css";
 
 import Loader from "./components/Loader/Loader";
 
-const Homepage = lazy(() => import("./pages/Homepage"));
-const Services = lazy(() => import("./pages/Services"));
-const Aboutpage = lazy(() => import("./pages/Aboutpage"));
-const Contact = lazy(() => import("./pages/Contact"));
-const BarHome = lazy(() => import("./pages/BarHome"));
-const Page404 = lazy(() => import("./pages/Page404"));
-const Signup = lazy(() => import("./components/SignUp/Signup"));
-const Thanks = lazy(() => import("./container/ThankYouPage/Thanks"));
+const Homepage = lazy(() => import("./pages/Homepage.jsx"));
+const Services = lazy(() => import("./pages/Services.jsx"));
+const Aboutpage = lazy(() => import("./pages/Aboutpage.jsx"));
+const Contact = lazy(() => import("./pages/Contact.jsx"));
+const BarHome = lazy(() => import("./pages/BarHome.jsx"));
+const Page404 = lazy(() => import("./pages/Page404.jsx"));
+const Signup = lazy(() => import("./components/SignUp/Signup.jsx"));
+const Thanks = lazy(() => import("./container/ThankYouPage/Thanks.jsx"));
 
 const App = () => (
   <div>
