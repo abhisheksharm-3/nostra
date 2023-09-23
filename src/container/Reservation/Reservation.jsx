@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { images } from "../../constants";
-import { Thanks } from "../";
 import "./reservation.css";
-import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 

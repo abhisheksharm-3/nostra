@@ -37,23 +37,24 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
-          <Link to="/about">About</Link>
+          <Link onMouseOver={() => import("../../pages/Aboutpage")} to="/about">About</Link>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
-          <Link to="/bar">Bar</Link>
+          <Link onMouseOver={() => import("../../pages/BarHome")} to="/bar">Bar</Link>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
-          <Link to="/services">Our Services</Link>
+          <Link onMouseOver={() => import("../../pages/Services")} to="/services">Our Services</Link>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
           <a href="#awards">Awards</a>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
-          <Link to="/contact">Contact</Link>
+          <Link onMouseOver={() => import("../../pages/Contact")} to="/contact">Contact</Link>
         </li>
       </ul>
       <div className="hidden xl:flex justify-end items-center">
         <Link
+        onMouseOver={() => import("../../components/SignUp/Signup")}
           to="/userauth"
           className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
           data-aos="fade-down"
@@ -91,19 +92,19 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
-                <Link to="/about">About</Link>
+                <Link onMouseOver={() => import("../../pages/Aboutpage")} to="/about">About</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
-                <Link to="/bar">Bar</Link>
+                <Link onMouseOver={() => import("../../pages/BarHome")} to="/bar">Bar</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
-                <Link to="/services">Our Services</Link>
+                <Link onMouseOver={() => import("../../pages/Services")} to="/services">Our Services</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
                 <Link to="#awards">Awards</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
-                <Link to="/contact">Contact</Link>
+                <Link onMouseOver={() => import("../../pages/Contact")} to="/contact">Contact</Link>
               </li>
             </ul>
             <div
@@ -111,6 +112,7 @@ const Navbar = () => {
               onClick={() => setToggleMenu(false)}
             >
               <Link
+              onMouseOver={() => import("../../components/SignUp/Signup")}
                 to="/userauth"
                 className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
               >
