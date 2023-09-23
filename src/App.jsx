@@ -4,7 +4,7 @@ import './App.css';
 
 import Loader from './components/Loader/Loader'
 
-import Homepage from './pages/Homepage'
+const Homepage = lazy(() => import('./pages/Homepage'));
 const Services = lazy(() => import('./pages/Services'));
 const Aboutpage = lazy(() => import('./pages/Aboutpage'));
 const Contact = lazy(() => import('./pages/Contact'));
