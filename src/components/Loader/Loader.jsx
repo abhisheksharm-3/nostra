@@ -3,7 +3,7 @@ import React from "react";
 import './loader.css'
 const Loader = () => {
   return (
-    <div className="h-screen w-screen grid place-content-center">
+    <div className="h-screen w-screen grid place-content-center bg-[#090909]">
       <div
         aria-label="Orange and tan hamster running in a metal wheel"
         role="img"
