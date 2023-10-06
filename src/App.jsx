@@ -12,6 +12,7 @@ const BarHome = lazy(() => import("./pages/BarHome.jsx"));
 const Page404 = lazy(() => import("./pages/Page404.jsx"));
 const Signup = lazy(() => import("./components/SignUp/Signup.jsx"));
 const Thanks = lazy(() => import("./container/ThankYouPage/Thanks.jsx"));
+const Profile = lazy(() => import("./pages/Profile.jsx"))
 
 const App = () => (
   <div>
@@ -24,6 +25,7 @@ const App = () => (
         <Route path="/bar" element={<BarHome />} />
         <Route path="/thanks" element={<Thanks />} />
         <Route path="/userauth" element={<Signup />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </Suspense>

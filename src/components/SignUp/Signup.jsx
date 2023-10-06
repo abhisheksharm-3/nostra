@@ -1,15 +1,58 @@
 import React, { useState, useRef } from "react";
 import Navbar from "../Navbar/Navbar";
 import { images } from "../../constants";
+import { v4 as uuidv4 } from 'uuid';
+import {account} from "../../appwrite/appwriteConfig"
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-  const [showOtpForm, setShowOtpForm] = useState(false);
+  const navigate = useNavigate();
+  const [showLogin, setShowLogin] = useState(false); // State to toggle between signup and login
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
   const numberInputRef = useRef(null);
 
   const handleProceed = () => {
-    setShowOtpForm(true);
+    setShowLogin(!showLogin); // Toggle between signup and login
     if (numberInputRef.current) {
       numberInputRef.current.value = "";
+    }
+  };
+
+  const handleSignup = async(e) => {
+    e.preventDefault();
+    if (email && name && password) {
+      const promise = await account.create(
+        uuidv4(),
+        email, password, name
+      )
+      console.log(promise)
+
+      promise.then(
+        function(response){
+          console.log(response)
+          navigate("/profile")
+        },
+        function(error){
+          alert(error.message)
+        }
+      )
+      // You can update your state or perform further actions as needed
+    } else {
+      console.error("Please fill in all fields.");
+    }
+  };
+
+  const handleLogin = async(e) => {
+    e.preventDefault();
+    if (email && password) {
+      const promise = await account.createEmailSession(email, password)
+      console.log(promise)
+      navigate("/profile")
+      // You can update your state or perform further actions as needed
+    } else {
+      console.error("Please enter both email and password.");
     }
   };
 
@@ -24,55 +67,91 @@ const Signup = () => {
             </h1>
           </div>
           <div className="lg:w-2/5 flex items-center justify-center flex-col bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
-            {showOtpForm ? (
+            {showLogin ? (
               <>
                 <h1 className="font-serif text-white text-[23px] font-bold capitalize leading-7 tracking-wider mt-16 mb-6 text-center">
-                  Enter OTP
+                  Login
                 </h1>
                 <div className="flex flex-col items-center">
                   <input
-                    type="text"
-                    id="otp"
-                    name="otp"
-                    pattern="[0-9]{6}"
-                    title="Please enter a valid 6-digit OTP"
-                    placeholder="OTP (6 digits)"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
                     className="bg-transparent border border-orange-400 font-serif py-2 px-4 text-[#ACACAC]"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    className="bg-transparent border border-orange-400 font-serif py-2 px-4 text-[#ACACAC] mt-4"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     required
                   />
                   <button
                     type="button"
-                    className="bg-[#F5EFDB] text-[#090909] font-serif font-bold tracking-[0.04em] leading-[28px] py-2 px-6 rounded-[1px] border-none cursor-pointer outline-none mt-8 ease-in duration-200 hover:bg-orange-400 mb-16 lg:mb-0"
+                    className="bg-[#F5EFDB] text-[#090909] font-serif font-bold tracking-[0.04em] leading-[28px] py-2 px-6 rounded-[1px] border-none cursor-pointer outline-none mt-8 ease-in duration-200 hover:bg-orange-400"
+                    onClick={handleLogin}
                   >
                     Login
                   </button>
                 </div>
+                <p className="mt-4 cursor-pointer text-blue-500" onClick={handleProceed}>
+                  Not registered? Sign up here.
+                </p>
               </>
             ) : (
               <>
                 <h1 className="font-serif text-white text-[23px] font-bold capitalize leading-7 tracking-wider mt-16 mb-6 text-center">
-                  Enter Your Mobile Number to Proceed
+                  Sign Up
                 </h1>
                 <div className="flex flex-col items-center">
                   <input
-                    type="tel"
-                    id="number"
-                    name="number"
-                    pattern="[0-9]{10}"
-                    title="Please enter a valid 10-digit number"
-                    placeholder="Mobile Number (10 digits)"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
                     className="bg-transparent border border-orange-400 font-serif py-2 px-4 text-[#ACACAC]"
-                    ref={numberInputRef}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                    className="bg-transparent border border-orange-400 font-serif py-2 px-4 text-[#ACACAC] mt-4"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    className="bg-transparent border border-orange-400 font-serif py-2 px-4 text-[#ACACAC] mt-4"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     required
                   />
                   <button
                     type="button"
-                    className="bg-[#F5EFDB] text-[#090909] font-serif font-bold tracking-[0.04em] leading-[28px] py-2 px-6 rounded-[1px] border-none cursor-pointer outline-none mt-8 ease-in duration-200 hover:bg-orange-400 mb-16 lg:mb-0"
-                    onClick={handleProceed}
+                    className="bg-[#F5EFDB] text-[#090909] font-serif font-bold tracking-[0.04em] leading-[28px] py-2 px-6 rounded-[1px] border-none cursor-pointer outline-none mt-8 ease-in duration-200 hover:bg-orange-400"
+                    onClick={handleSignup}
                   >
-                    Proceed
+                    Sign Up
                   </button>
                 </div>
+                <p className="mt-4 cursor-pointer text-blue-500" onClick={handleProceed}>
+                  Already registered? Log in here.
+                </p>
               </>
             )}
           </div>
