@@ -4,6 +4,7 @@ import { MdOutlineRestaurantMenu } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 import images from "../../constants/images";
+import { useUser } from "../../context/UserContextProvider";
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -16,6 +17,12 @@ AOS.init({
 import "./Navbar.css";
 
 const Navbar = () => {
+  const handleLoginClick = () => {
+    if (user) {
+      logout();
+    }
+  };
+  const { current: user, logout } = useUser();
   const [toggleMenu, setToggleMenu] = React.useState(false);
   return (
     <nav className="w-full flex justify-between items-center bg-[#090909] text-[#Acacac] lg:py-4 lg:px-8 p-4">
@@ -37,38 +44,50 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
-          <Link onMouseOver={() => import("../../pages/Aboutpage")} to="/about">About</Link>
+          <Link onMouseOver={() => import("../../pages/Aboutpage")} to="/about">
+            About
+          </Link>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
-          <Link onMouseOver={() => import("../../pages/BarHome")} to="/bar">Bar</Link>
+          <Link onMouseOver={() => import("../../pages/BarHome")} to="/bar">
+            Bar
+          </Link>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
-          <Link onMouseOver={() => import("../../pages/Services")} to="/services">Our Services</Link>
+          <Link
+            onMouseOver={() => import("../../pages/Services")}
+            to="/services"
+          >
+            Our Services
+          </Link>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
           <a href="#awards">Awards</a>
         </li>
         <li className="py-0 px-4 cursor-pointer hover:text-white">
-          <Link onMouseOver={() => import("../../pages/Contact")} to="/contact">Contact</Link>
+          <Link onMouseOver={() => import("../../pages/Contact")} to="/contact">
+            Contact
+          </Link>
         </li>
       </ul>
       <div className="hidden xl:flex justify-end items-center">
         <Link
-        onMouseOver={() => import("../../components/SignUp/Signup")}
-          to="/userauth"
-          className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
+          onMouseOver={() => import("../../components/SignUp/Signup")}
+          to={user ? "/" : "/userauth"}
+          className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400 hover:text-white"
           data-aos="fade-down"
+          onClick={handleLoginClick}
         >
-          Log In / SignUp
+          {user ? "Logout" : "Log In / Sign Up"}
         </Link>
         <div className="w-px h-[30px] bg-white" data-aos="fade-up" />
-        <a
-          href="#booking"
-          className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
+        <Link
+          to="/profile"
+          className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400 hover:text-white"
           data-aos="fade-down"
         >
           Book Table
-        </a>
+        </Link>
       </div>
       <div className="md:flex lg:hidden" data-aos="fade-up">
         <GiHamburgerMenu
@@ -92,19 +111,39 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
-                <Link onMouseOver={() => import("../../pages/Aboutpage")} to="/about">About</Link>
+                <Link
+                  onMouseOver={() => import("../../pages/Aboutpage")}
+                  to="/about"
+                >
+                  About
+                </Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
-                <Link onMouseOver={() => import("../../pages/BarHome")} to="/bar">Bar</Link>
+                <Link
+                  onMouseOver={() => import("../../pages/BarHome")}
+                  to="/bar"
+                >
+                  Bar
+                </Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
-                <Link onMouseOver={() => import("../../pages/Services")} to="/services">Our Services</Link>
+                <Link
+                  onMouseOver={() => import("../../pages/Services")}
+                  to="/services"
+                >
+                  Our Services
+                </Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
                 <Link to="#awards">Awards</Link>
               </li>
               <li className="m-8 cursor-pointer text-orange-400 text-[32px] text-center font-serif hover:text-white">
-                <Link onMouseOver={() => import("../../pages/Contact")} to="/contact">Contact</Link>
+                <Link
+                  onMouseOver={() => import("../../pages/Contact")}
+                  to="/contact"
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
             <div
@@ -112,19 +151,20 @@ const Navbar = () => {
               onClick={() => setToggleMenu(false)}
             >
               <Link
-              onMouseOver={() => import("../../components/SignUp/Signup")}
-                to="/userauth"
+                onMouseOver={() => import("../../components/SignUp/Signup")}
+                to={user ? "/" : "/userauth"}
                 className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
+                onClick={handleLoginClick}
               >
-                Log In / SignUp
+                {user ? "Logout" : "Log In / Sign Up"}
               </Link>
               <div className="w-px h-[30px] bg-white" />
-              <a
-                href="#booking"
+              <Link
+                to="/profile"
                 className="my-0 mx-4 ease-in duration-500 hover:border-b-orange-400"
               >
                 Book Table
-              </a>
+              </Link>
             </div>
           </div>
         )}
