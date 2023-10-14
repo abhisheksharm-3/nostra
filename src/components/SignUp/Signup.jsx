@@ -10,7 +10,7 @@ import toast from "react-hot-toast";
 const Signup = () => {
   const user = useUser();
   const navigate = useNavigate();
-  const [showLogin, setShowLogin] = useState(false); // State to toggle between signup and login
+  const [showLogin, setShowLogin] = useState(true); // State to toggle between signup and login
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");

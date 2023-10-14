@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useUser } from "../context/UserContextProvider";
 import { useBookings } from "../context/BookingContextProvides";
 import { Navbar } from "../components";
@@ -11,6 +11,7 @@ const Profile = () => {
   const navigate = useNavigate();
   const { current: user } = useUser();
   const { current: bookings } = useBookings();
+  const [name, setName] = useState("");
   const [nextBookingDate, setNextBookingDate] = React.useState(null);
   React.useEffect(() => {
     // Find the next upcoming booking date
@@ -26,6 +27,11 @@ const Profile = () => {
       setNextBookingDate(null);
     }
   }, [bookings]);
+  useEffect(() => {
+    if (user) {
+      setName(user.name);
+    }
+  }, [user]);
   // useEffect(() => {
   //   if (user === null) {
 
@@ -34,17 +40,19 @@ const Profile = () => {
   // }, [user]);
   const NoUpcomingBookingMessage = () => (
     <div className="bg-[#090909] text-white rounded-lg p-5 cursor-pointer hover:-translate-y-1 ease-in-out duration-700">
-    <p className="text-lg font-semibold font-serif capitalize">
-      {nextBookingDate
-        ? (
+      <p className="text-lg font-semibold font-serif capitalize">
+        {nextBookingDate ? (
           <span>
-            Next booking: <span className="text-orange-400 font-bold text-xl">{nextBookingDate.toLocaleString()}</span>
+            Next booking:{" "}
+            <span className="text-orange-400 font-bold text-xl">
+              {nextBookingDate.toLocaleString()}
+            </span>
           </span>
-        )
-        : "No recent booking"
-      }
-    </p>
-  </div>
+        ) : (
+          "No recent booking"
+        )}
+      </p>
+    </div>
   );
 
   return (
@@ -57,7 +65,7 @@ const Profile = () => {
               Welcome back ,
             </h2>
             <h1 className="text-5xl text-orange-600 font-bold font-serif mb-8">
-              {user ? user.name : ""}
+              {name}
             </h1>
           </div>
           <NoUpcomingBookingMessage />
