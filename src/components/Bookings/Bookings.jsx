@@ -19,7 +19,7 @@ const Bookings = () => {
         {Array.isArray(bookings) && bookings.length > 0 ? (
           <div className="rounded-lg p-4 backdrop-blur-md">
             <table className="w-full table-fixed bg-[#090909] bg-opacity-30 rounded-lg shadow-md">
-              <thead>
+              <thead className='text-[#090909]'>
                 <tr>
                   <th className="text-center font-serif lg:text-3xl bg-orange-400 p-2 lg:p-4 border border-orange-100">Name</th>
                   <th className="text-center font-serif lg:text-3xl bg-orange-400 p-2 lg:p-4 border border-orange-100">Phone Number</th>

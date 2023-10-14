@@ -55,6 +55,11 @@ const Profile = () => {
     </div>
   );
 
+  const RefreshDetailsMessage = () => (
+    <p className="text-lg text-red-600 font-bold tracking-widest mt-4">
+      Logged In but not able to see your details? Try Refreshing!
+    </p>
+  );
   return (
     <div className="w-full h-full flex flex-col items-center justify-center text-white ">
       <Navbar />
@@ -70,13 +75,15 @@ const Profile = () => {
           </div>
           <NoUpcomingBookingMessage />
         </div>
-        {user && (
+        {user && (<>
+          <RefreshDetailsMessage />
           <Link
             to="/previous-bookings"
             className="text-2xl text-orange-400 font-serif font-semibold hover:text-orange-600 ease-in-out duration-500 hover:underline"
           >
             View Your Previous Bookings
           </Link>
+          </>
         )}
         <div className="bg-orange-400 w-20 h-2 mx-auto mt-4 mb-6"></div>
         <Reservation />

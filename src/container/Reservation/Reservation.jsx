@@ -13,6 +13,7 @@ const Reservation = () => {
   const [numberOfPersons, setNumberOfPersons] = useState(2);
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
+  const [number, setNumber] = useState("")
   const [QR, setQR] = useState(false);
   const [formError, setFormError] = useState("");
 
@@ -68,7 +69,7 @@ const Reservation = () => {
     const combinedDateTime = new Date(date + " " + time);
     const booking = {
       name: name,
-      phone: "0",
+      phone: number,
       booking_date: combinedDateTime,
       guests: numberOfPersons,
       userId: user.current.$id,
@@ -130,6 +131,8 @@ const Reservation = () => {
                     id="number"
                     name="number"
                     pattern="[0-9]{10}"
+                    value={number}
+                    onChange={(e) => setNumber(e.target.value)}
                     title="Please enter a valid 10-digit number"
                     placeholder="Mobile Number (10 digits)"
                     className="bg-[#090909] text-[#ACACAC] border border-orange-300 font-serif rounded-sm text-center"
