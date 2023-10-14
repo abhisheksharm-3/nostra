@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { AboutUs, Chef, FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu, Reservation, MenuPage, Testimonials } from '../container';
+import { AboutUs, Chef, FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu, MenuPage, Testimonials } from '../container';
 import { Navbar } from '../components';
 
 const Homepage = () => {
@@ -9,7 +9,6 @@ const Homepage = () => {
     <Navbar />
     <Header />
     <AboutUs />
-    <Reservation />
     <MenuPage />
     <SpecialMenu />
     <Chef />

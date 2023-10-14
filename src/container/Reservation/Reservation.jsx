@@ -2,14 +2,18 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { images } from "../../constants";
 import "./reservation.css";
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-
+import "aos/dist/aos.css"; // You can also use <link> for styles
+import { useBookings } from "../../context/BookingContextProvides";
+import { useUser } from "../../context/UserContextProvider";
 
 const Reservation = () => {
+  const { add } = useBookings();
+  const user = useUser();
   const [name, setName] = useState("");
   const [numberOfPersons, setNumberOfPersons] = useState(2);
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
+  const [QR, setQR] = useState(false);
   const [formError, setFormError] = useState("");
 
   const User = {
@@ -28,7 +32,8 @@ const Reservation = () => {
     setTime("20:00");
   }, []);
 
-  const handleSubmit = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     // Validation checks
     if (name.length < 2) {
       setFormError("Name should be at least 2 characters long.");
@@ -60,7 +65,16 @@ const Reservation = () => {
     // Form is valid, submit the form
     setFormError("");
     // TODO: Add your form submission logic here
-    console.log("Form submitted successfully");
+    const combinedDateTime = new Date(date + " " + time);
+    const booking = {
+      name: name,
+      phone: "0",
+      booking_date: combinedDateTime,
+      guests: numberOfPersons,
+      userId: user.current.$id,
+    };
+    await add(booking);
+    setQR(true);
   };
 
   const selectedDate = new Date(date);
@@ -90,7 +104,10 @@ const Reservation = () => {
           <div className="mt-[10px] mb-[30px]">
             <img src={images.spoon} alt="spoon img" className="w-[45px]" />
           </div>
-          <h3 className="text-center font-serif text-orange-400 text-[40px] lg:text-[64px] font-semibold capitalize lg:leading-10 tracking-wider lg:tracking-widest" data-aos="flip-up">
+          <h3
+            className="text-center font-serif text-orange-400 text-[40px] lg:text-[64px] font-semibold capitalize lg:leading-10 tracking-wider lg:tracking-widest"
+            data-aos="flip-up"
+          >
             Book a table
           </h3>
           <div>
@@ -108,16 +125,16 @@ const Reservation = () => {
                   />
                 </div>
                 <div>
-                <input
-                type="tel"
-                id="number"
-                name="number"
-                pattern="[0-9]{10}"
-                title="Please enter a valid 10-digit number"
-                placeholder="Mobile Number (10 digits)"
-                className="bg-[#090909] text-[#ACACAC] border border-orange-300 font-serif rounded-sm text-center"
-                required
-              />
+                  <input
+                    type="tel"
+                    id="number"
+                    name="number"
+                    pattern="[0-9]{10}"
+                    title="Please enter a valid 10-digit number"
+                    placeholder="Mobile Number (10 digits)"
+                    className="bg-[#090909] text-[#ACACAC] border border-orange-300 font-serif rounded-sm text-center"
+                    required
+                  />
                 </div>
                 <div>
                   <input
@@ -204,7 +221,7 @@ const Reservation = () => {
 
               {formError && <p className="text-red-500 mt-2">{formError}</p>}
 
-              <div className="flex justify-center items-center mt-14">
+              <div className="flex flex-col gap-4 justify-center items-center mt-14">
                 <Link to="/thanks" state={User}>
                   <button
                     type="submit"
@@ -215,6 +232,16 @@ const Reservation = () => {
                     Book Now
                   </button>
                 </Link>
+                {QR && (
+                  <Link to="/thanks" state={User}>
+                    <button
+                      disabled={isSubmitDisabled}
+                      className="bg-[#F5EFDB] text-[#090909] font-serif font-bold tracking-[0.04em] leading-[28px] py-2 px-6 rounded-[1px] border-none cursor-pointer outline-none ease-in duration-200 hover:bg-orange-400"
+                    >
+                      See your Booking QR
+                    </button>
+                  </Link>
+                )}
               </div>
             </form>
           </div>

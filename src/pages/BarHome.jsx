@@ -1,14 +1,13 @@
 import React from 'react'
 import { Navbar, BarHeader } from '../components'
 
-import { Footer,  Reservation, HappyHours, SpecialMenu,  FindUs, AboutBar, Poison } from '../container'
+import { Footer, HappyHours, SpecialMenu,  FindUs, AboutBar, Poison } from '../container'
 
 const BarHome = () => {
   return (
     <div>
         <Navbar />
         <BarHeader />
-        <Reservation />
         <AboutBar />
         <Poison />
         <HappyHours />

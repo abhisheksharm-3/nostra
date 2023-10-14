@@ -13,6 +13,7 @@ const Page404 = lazy(() => import("./pages/Page404.jsx"));
 const Signup = lazy(() => import("./components/SignUp/Signup.jsx"));
 const Thanks = lazy(() => import("./container/ThankYouPage/Thanks.jsx"));
 const Profile = lazy(() => import("./pages/Profile.jsx"))
+const PreviousBookings = lazy(() => import("./pages/PreviousBookings"))
 
 const App = () => (
   <div>
@@ -26,6 +27,7 @@ const App = () => (
         <Route path="/thanks" element={<Thanks />} />
         <Route path="/userauth" element={<Signup />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/previous-bookings" element={<PreviousBookings />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </Suspense>

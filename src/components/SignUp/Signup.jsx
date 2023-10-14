@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import {account} from "../../appwrite/appwriteConfig"
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/UserContextProvider";
+import toast from "react-hot-toast";
 
 const Signup = () => {
   const user = useUser();
@@ -50,7 +51,7 @@ const Signup = () => {
       console.log(promise)
       navigate("/profile")
     } else {
-      alert("Please enter both email and password.");
+      toast.error("Please enter both email and password.");
     }
   };
 
