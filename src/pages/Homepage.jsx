@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { AboutUs, Chef, FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu, MenuPage, Testimonials } from '../container';
 import { Navbar } from '../components';
 
