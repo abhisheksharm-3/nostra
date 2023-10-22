@@ -3,6 +3,13 @@
 
 Design Credit: https://ui8.net/iqonicdesign/products/gericht-restaurant-website-ui-in-figma
 
+
+### This Project Uses Appwrite as Backend
+### ENV Template
+- VITE_PROJECT_ID = 
+- VITE_DB_ID = 
+- VITE_COLL_ID = 
+
 ## How to contribute 
 
 - Fork the Repo(abhisheksharm-3/backend-test branch)
