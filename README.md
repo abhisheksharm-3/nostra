@@ -5,11 +5,11 @@ Design Credit: https://ui8.net/iqonicdesign/products/gericht-restaurant-website-
 
 ## How to contribute 
 
-- Fork the Repo(backend-test branch)
+- Fork the Repo(abhisheksharm-3/backend-test branch)
 - Clone the Forked Repository
-- Create a new Branch with Specified Format (<yourname>/<yourFeature>)
+- Create a new Branch with Specified Format ({yourname}/{yourFeature})
 - Make your changes 
-- Push your changes to a PR on this Repo(backend-test branch)
+- Push your changes to a PR on this Repo(abhisheksharm-3/backend-test branch)
 - Wait for a Review and merge
 - Celebrate your first PR
 
