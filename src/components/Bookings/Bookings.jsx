@@ -1,10 +1,21 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
 import { useBookings } from '../../context/BookingContextProvides';
 import { useUser } from '../../context/UserContextProvider';
+import { useNavigate } from 'react-router-dom';
 
 const Bookings = () => {
   const { current: bookings } = useBookings(); // Assuming useBookings provides access to booking data
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
   const user = useUser(); // Assuming useUser provides user information
+  useEffect(() => {
+    if (user.current === null && !loading) {
+      
+      navigate("/userauth"); // Redirect to the login page
+    } else if (user) {
+      setLoading(false); // User data has loaded
+    }
+  }, [user, navigate, loading]);
 
   const formatBookingDate = (dateString) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };

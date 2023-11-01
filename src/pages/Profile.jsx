@@ -11,6 +11,7 @@ const Profile = () => {
   const navigate = useNavigate();
   const { current: user } = useUser();
   const { current: bookings } = useBookings();
+  const [loading, setLoading] = useState(true);
   const [name, setName] = useState("");
   const [nextBookingDate, setNextBookingDate] = React.useState(null);
   React.useEffect(() => {
@@ -30,14 +31,15 @@ const Profile = () => {
   useEffect(() => {
     if (user) {
       setName(user.name);
+    } 
+  }, [user, loading]);
+  useEffect(() => {
+    if (user === null && !loading) {
+      navigate("/userauth"); // Redirect to the login page
+    } else if (user) {
+      setLoading(false); // User data has loaded
     }
-  }, [user]);
-  // useEffect(() => {
-  //   if (user === null) {
-
-  //     navigate("/userauth");
-  //   }
-  // }, [user]);
+  }, [user, navigate, loading]);
   const NoUpcomingBookingMessage = () => (
     <div className="bg-[#090909] text-white rounded-lg p-5 cursor-pointer hover:-translate-y-1 ease-in-out duration-700">
       <p className="text-lg font-semibold font-serif capitalize">
