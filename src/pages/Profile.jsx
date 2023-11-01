@@ -35,7 +35,7 @@ const Profile = () => {
   useEffect(() => {
     if (user.current === null && !loading) {
       navigate("/userauth"); // Redirect to the login page
-    } else if (user) {
+    } else if (user.current !== null) {
       setLoading(false); // User data has loaded
     }
   }, [user, navigate, loading]);
