@@ -5,7 +5,6 @@ import { Navbar } from "../components";
 import { Reservation } from "../container";
 import { Footer } from "../container";
 import { Link, useNavigate } from "react-router-dom";
-import toast from "react-hot-toast";
 
 const Profile = () => {
   const navigate = useNavigate();
