@@ -1,6 +1,6 @@
 import React from 'react'
 import { HeaderImage, Navbar, } from '../components'
-import { ServiceQuality, Reservation, HappyHours, MenuPage, Footer } from '../container'
+import { ServiceQuality, HappyHours, MenuPage, Footer } from '../container'
 
 const Services = () => {
   return (
@@ -9,7 +9,6 @@ const Services = () => {
         <HeaderImage title="What We Offer" path="Home > Our Services"/>
         <ServiceQuality />
         <MenuPage />
-        <Reservation />
         <HappyHours />
         <Footer />
     </div>
