@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import { images } from "../../constants";
 import { v4 as uuidv4 } from 'uuid';
@@ -9,12 +9,21 @@ import toast from "react-hot-toast";
 
 const Signup = () => {
   const user = useUser();
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const [showLogin, setShowLogin] = useState(true); // State to toggle between signup and login
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const numberInputRef = useRef(null);
+
+  useEffect(() => {
+    if (user !== null && !loading) {
+      navigate("/profile"); // Redirect to the login page
+    } else if (user) {
+      setLoading(false); // User data has loaded
+    }
+  }, [user, navigate, loading]);
 
   const handleProceed = () => {
     setShowLogin(!showLogin); // Toggle between signup and login

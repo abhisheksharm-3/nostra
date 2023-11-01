@@ -31,7 +31,7 @@ const Profile = () => {
   useEffect(() => {
     if (user) {
       setName(user.name);
-    } 
+    }
   }, [user, loading]);
   useEffect(() => {
     if (user === null && !loading) {

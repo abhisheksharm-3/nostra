@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Loader from "./components/Loader/Loader";
+import { Toaster } from "react-hot-toast";
 
 const Homepage = lazy(() => import("./pages/Homepage.jsx"));
 const Services = lazy(() => import("./pages/Services.jsx"));
@@ -17,6 +18,7 @@ const PreviousBookings = lazy(() => import("./pages/PreviousBookings"))
 
 const App = () => (
   <div>
+    <Toaster />
     <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<Homepage />} />
