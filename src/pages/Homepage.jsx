@@ -1,23 +1,37 @@
-import { AboutUs, Chef, FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu, MenuPage, Testimonials } from '../container';
-import { Navbar } from '../components';
+import {
+  AboutUs,
+  Chef,
+  FindUs,
+  Footer,
+  Gallery,
+  Header,
+  Intro,
+  Laurels,
+  SpecialMenu,
+  MenuPage,
+  Testimonials,
+} from "../container";
+import { Navbar } from "../components";
+import NewsMessage from "../components/News/UserProfile";
 
 const Homepage = () => {
   return (
     <div>
-    <Navbar />
-    <Header />
-    <AboutUs />
-    <MenuPage />
-    <SpecialMenu />
-    <Chef />
-    <Testimonials />
-    <Intro />
-    <Laurels />
-    <Gallery />
-    <FindUs />
-    <Footer />
+      <NewsMessage />
+      <Navbar />
+      <Header />
+      <AboutUs />
+      <MenuPage />
+      <SpecialMenu />
+      <Chef />
+      <Testimonials />
+      <Intro />
+      <Laurels />
+      <Gallery />
+      <FindUs />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;
