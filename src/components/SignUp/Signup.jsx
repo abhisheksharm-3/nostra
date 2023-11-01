@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
-import { images } from "../../constants";
 import { v4 as uuidv4 } from 'uuid';
 import {account} from "../../appwrite/appwriteConfig"
 import { useNavigate } from "react-router-dom";
@@ -18,7 +17,8 @@ const Signup = () => {
   const numberInputRef = useRef(null);
 
   useEffect(() => {
-    if (user !== null && !loading) {
+    console.log(user);
+    if (user.current !== null && !loading) {
       navigate("/profile"); // Redirect to the login page
     } else if (user) {
       setLoading(false); // User data has loaded
@@ -39,7 +39,7 @@ const Signup = () => {
         uuidv4(),
         email, password, name
       ).then(
-        async function(response){
+        async function(){
           await user.login(email, password);
           // await account.createVerification("http://localhost:8888/")
           navigate("/profile")
