@@ -33,6 +33,11 @@ const Profile = () => {
     }
   }, [user, loading]);
   useEffect(() => {
+
+    //TODO: Fix this logic or it causes infinite reloads when user visits protected routes
+    // if (!user || !user.name) {
+    //   window.location.reload(); // Reload the page if user.name doesn't exist
+    // }
     if (user.current === null && !loading) {
       navigate("/userauth"); // Redirect to the login page
     } else if (user.current !== null) {
