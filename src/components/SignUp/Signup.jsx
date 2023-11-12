@@ -17,7 +17,6 @@ const Signup = () => {
   const numberInputRef = useRef(null);
 
   useEffect(() => {
-    console.log(user);
     if (user.current !== null && !loading) {
       navigate("/profile"); // Redirect to the login page
     } else if (user) {
@@ -57,7 +56,6 @@ const Signup = () => {
     e.preventDefault();
     if (email && password) {
       const promise = await user.login(email, password)
-      console.log(promise)
       navigate("/profile")
     } else {
       toast.error("Please enter both email and password.");
