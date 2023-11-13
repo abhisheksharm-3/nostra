@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
-import { v4 as uuidv4 } from 'uuid';
-import {account} from "../../appwrite/appwriteConfig"
+import { v4 as uuidv4 } from "uuid";
+import { account } from "../../appwrite/appwriteConfig";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/UserContextProvider";
 import toast from "react-hot-toast";
+import GoogleButton from "react-google-button";
 
 const Signup = () => {
   const user = useUser();
@@ -31,35 +32,46 @@ const Signup = () => {
     }
   };
 
-  const handleSignup = async(e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
     if (email && name && password) {
-      await account.create(
-        uuidv4(),
-        email, password, name
-      ).then(
-        async function(){
+      await account.create(uuidv4(), email, password, name).then(
+        async function () {
           await user.login(email, password);
-          // await account.createVerification("http://localhost:8888/")
-          navigate("/profile")
+          // TODO: Make this auth work
+          // const promise = account.createVerification('http://localhost:8888');
+          //   promise.then(function (response) {
+          //     console.log(response);
+          // }, function (error) {
+          //     console.log(error);
+          // });
+          navigate("/profile");
         },
-        function(error){
-          alert(error.message)
+        function (error) {
+          alert(error.message);
         }
-      )
+      );
     } else {
       alert("Please fill in all fields.");
     }
   };
 
-  const handleLogin = async(e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     if (email && password) {
-      const promise = await user.login(email, password)
-      navigate("/profile")
+      const promise = await user.login(email, password);
+      navigate("/profile");
     } else {
       toast.error("Please enter both email and password.");
     }
+  };
+  const googleLogin = async (e) => {
+    e.preventDefault();
+    const promise = await account.createOAuth2Session(
+      "google",
+      `${import.meta.env.VITE_DOMAIN}/profile`,
+      `${import.meta.env.VITE_DOMAIN}/userauth`
+    );
   };
 
   return (
@@ -106,8 +118,13 @@ const Signup = () => {
                   >
                     Login
                   </button>
+                  <p className="text-white font-serif font-bold text-lg">or</p>
+                  <GoogleButton onClick={googleLogin} />
                 </div>
-                <p className="mt-4 cursor-pointer text-blue-500" onClick={handleProceed}>
+                <p
+                  className="mt-4 cursor-pointer text-blue-500"
+                  onClick={handleProceed}
+                >
                   Not registered? Sign up here.
                 </p>
               </>
@@ -154,8 +171,13 @@ const Signup = () => {
                   >
                     Sign Up
                   </button>
+                  <p className="text-white font-serif font-bold text-lg">or</p>
+                  <GoogleButton onClick={googleLogin} />
                 </div>
-                <p className="mt-4 cursor-pointer text-blue-500" onClick={handleProceed}>
+                <p
+                  className="mt-4 cursor-pointer text-blue-500"
+                  onClick={handleProceed}
+                >
                   Already registered? Log in here.
                 </p>
               </>

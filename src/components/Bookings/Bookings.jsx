@@ -13,7 +13,6 @@ const Bookings = () => {
   const itemsPerPage = 10; // Number of items to display per page
   const [currentPage, setCurrentPage] = useState(1);
   React.useEffect(() => {
-    console.log(user);
     if (user === null || user.current === null) {
       navigate("/userauth"); // Redirect to the login page
     } else if (user !== null || user.current !== null) {
