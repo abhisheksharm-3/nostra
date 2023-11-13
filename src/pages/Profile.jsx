@@ -28,20 +28,14 @@ const Profile = () => {
     }
   }, [bookings]);
   useEffect(() => {
-    if (user) {
-      setName(user.name);
-    }
-  }, [user, loading]);
-  useEffect(() => {
-
-    //TODO: Fix this logic or it causes infinite reloads when user visits protected routes
-    // if (!user || !user.name) {
-    //   window.location.reload(); // Reload the page if user.name doesn't exist
-    // }
-    if (user.current === null && !loading) {
+    if (user === null) {
       navigate("/userauth"); // Redirect to the login page
-    } else if (user.current !== null) {
+    } else if (user !== null) {
       setLoading(false); // User data has loaded
+      if (user && !user.name) {
+        window.location.reload();
+      }
+      setName(user.name);
     }
   }, [user, navigate, loading]);
   const NoUpcomingBookingMessage = () => (
@@ -72,7 +66,7 @@ const Profile = () => {
       <div className="p-10 text-center bg-[url('./assets/404-1.jpg')] bg-cover bg-center">
         <div className="flex flex-col lg:flex-row items-center justify-between p-8 lg:p-20 w-screen">
           <div>
-            <h2 className="text-4xl font-serif font-semibold mb-4">
+            <h2 className="text-4xl font-serif font-semibold mb-4 ">
               Welcome back ,
             </h2>
             <h1 className="text-5xl text-orange-600 font-bold font-serif mb-8">
@@ -81,14 +75,15 @@ const Profile = () => {
           </div>
           <NoUpcomingBookingMessage />
         </div>
-        {user && (<>
-          <RefreshDetailsMessage />
-          <Link
-            to="/previous-bookings"
-            className="text-2xl text-orange-400 font-serif font-semibold hover:text-orange-600 ease-in-out duration-500 hover:underline"
-          >
-            View Your Previous Bookings
-          </Link>
+        {user && (
+          <>
+            <RefreshDetailsMessage />
+            <Link
+              to="/previous-bookings"
+              className="text-2xl text-orange-400 font-serif font-semibold hover:text-orange-600 ease-in-out duration-500 hover:underline"
+            >
+              View Your Previous Bookings
+            </Link>
           </>
         )}
         <div className="bg-orange-400 w-20 h-2 mx-auto mt-4 mb-6"></div>
