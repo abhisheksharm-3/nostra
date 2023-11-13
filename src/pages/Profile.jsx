@@ -12,6 +12,7 @@ const Profile = () => {
   const { current: bookings } = useBookings();
   const [loading, setLoading] = useState(true);
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [nextBookingDate, setNextBookingDate] = React.useState(null);
   React.useEffect(() => {
     // Find the next upcoming booking date
@@ -36,6 +37,7 @@ const Profile = () => {
         window.location.reload();
       }
       setName(user.name);
+      setEmail(user.email);
     }
   }, [user, navigate, loading]);
   const NoUpcomingBookingMessage = () => (
@@ -73,6 +75,7 @@ const Profile = () => {
               {name}
             </h1>
           </div>
+          <p className="font-serif text-2xl">{email}</p>
           <NoUpcomingBookingMessage />
         </div>
         {user && (

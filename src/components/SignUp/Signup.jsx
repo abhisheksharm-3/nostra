@@ -172,7 +172,7 @@ const Signup = () => {
                     Sign Up
                   </button>
                   <p className="text-white font-serif font-bold text-lg">or</p>
-                  <GoogleButton onClick={googleLogin} />
+                  <GoogleButton label="Sign up with Google" onClick={googleLogin} />
                 </div>
                 <p
                   className="mt-4 cursor-pointer text-blue-500"
