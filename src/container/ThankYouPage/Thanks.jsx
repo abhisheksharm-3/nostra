@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ConfettiExplosion from 'react-confetti-explosion';
 
@@ -15,11 +15,14 @@ const Thanks = (props) => {
 
     setQRCodeURL(qrCodeURL);
   }, [
+    propsData.id,
     propsData.userName,
     propsData.guests,
     propsData.time,
     propsData.visiting,
   ]);
+
+  const origin = propsData.origin ? propsData.origin : "/profile"
 
   return (
     <div className="bg-[#090909] w-full flex flex-col items-center justify-center gap-12 h-screen">
@@ -34,7 +37,7 @@ const Thanks = (props) => {
         <br /> show this screen at the front counter on your visit.
         <br /> thank you for choosing Nostra.
       </p1>
-      <Link to="/">
+      <Link to={origin}>
         <button
           type="button"
           className="bg-[#F5EFDB] text-[#090909] font-serif font-bold tracking-[0.04em] leading-[28px] py-2 px-6 rounded-[1px] border-none cursor-pointer outline-none ease-in duration-200 hover:bg-orange-400"
