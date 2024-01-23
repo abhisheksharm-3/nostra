@@ -39,3 +39,128 @@ You will also see any lint errors in the console.
 
 ### Do not update any packages without explicit approval
 
+
+```
+nostra
+├─ .eslintrc.cjs
+├─ .gitignore
+├─ index.html
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.js
+├─ public
+│  └─ _redirects
+├─ README.md
+├─ src
+│  ├─ App.css
+│  ├─ App.jsx
+│  ├─ appwrite
+│  │  └─ appwriteConfig.js
+│  ├─ assets
+│  ├─ authProtection
+│  │  └─ Authcheck.jsx
+│  ├─ components
+│  │  ├─ Bookings
+│  │  │  └─ Bookings.jsx
+│  │  ├─ Footer
+│  │  │  ├─ FooterOverlay.css
+│  │  │  ├─ FooterOverlay.jsx
+│  │  │  ├─ Newsletter.css
+│  │  │  └─ Newsletter.jsx
+│  │  ├─ Header
+│  │  │  ├─ BarHeader.jsx
+│  │  │  └─ HeaderImage.jsx
+│  │  ├─ index.js
+│  │  ├─ Loader
+│  │  │  ├─ loader.css
+│  │  │  └─ Loader.jsx
+│  │  ├─ Menuitem
+│  │  │  ├─ MenuItem.css
+│  │  │  └─ MenuItem.jsx
+│  │  ├─ Navbar
+│  │  │  └─ Navbar.jsx
+│  │  ├─ News
+│  │  │  └─ UserProfile.jsx
+│  │  ├─ SignUp
+│  │  │  └─ Signup.jsx
+│  │  └─ SubHeading
+│  │     └─ SubHeading.jsx
+│  ├─ constants
+│  │  ├─ data.js
+│  │  ├─ images.js
+│  │  ├─ index.js
+│  │  └─ userContext.jsx
+│  ├─ container
+│  │  ├─ AboutBar
+│  │  │  └─ AboutBar.jsx
+│  │  ├─ AboutUs
+│  │  │  ├─ AboutUs.css
+│  │  │  └─ AboutUs.jsx
+│  │  ├─ Chef
+│  │  │  ├─ Chef.css
+│  │  │  └─ Chef.jsx
+│  │  ├─ Findus
+│  │  │  └─ FindUs.jsx
+│  │  ├─ Footer
+│  │  │  ├─ Footer.css
+│  │  │  └─ Footer.jsx
+│  │  ├─ Gallery
+│  │  │  ├─ Gallery.css
+│  │  │  └─ Gallery.jsx
+│  │  ├─ HappyHours
+│  │  │  └─ HappyHours.jsx
+│  │  ├─ Header
+│  │  │  ├─ Header.css
+│  │  │  └─ Header.jsx
+│  │  ├─ index.js
+│  │  ├─ InfoVideo
+│  │  │  └─ InfoVideo.jsx
+│  │  ├─ Intro
+│  │  │  ├─ Intro.css
+│  │  │  └─ Intro.jsx
+│  │  ├─ Laurels
+│  │  │  ├─ Laurels.css
+│  │  │  └─ Laurels.jsx
+│  │  ├─ Map
+│  │  │  └─ Map.jsx
+│  │  ├─ Menu
+│  │  │  ├─ SpecialMenu.css
+│  │  │  └─ SpecialMenu.jsx
+│  │  ├─ MenuPage
+│  │  │  └─ MenuPage.jsx
+│  │  ├─ PoisonPage
+│  │  │  └─ Poison.jsx
+│  │  ├─ ReachUs
+│  │  │  └─ ReachFile.jsx
+│  │  ├─ Reservation
+│  │  │  ├─ reservation.css
+│  │  │  └─ Reservation.jsx
+│  │  ├─ ServiceQuality
+│  │  │  └─ ServiceQuality.jsx
+│  │  ├─ Stats
+│  │  │  └─ Stats.jsx
+│  │  ├─ Testimony
+│  │  │  └─ Testimonials.jsx
+│  │  └─ ThankYouPage
+│  │     └─ Thanks.jsx
+│  ├─ context
+│  │  ├─ BookingContext.js
+│  │  ├─ BookingContextProvides.jsx
+│  │  ├─ UserContext.js
+│  │  └─ UserContextProvider.jsx
+│  ├─ index.css
+│  ├─ main.jsx
+│  └─ pages
+│     ├─ Aboutpage.jsx
+│     ├─ BarHome.jsx
+│     ├─ Contact.jsx
+│     ├─ Homepage.jsx
+│     ├─ Page404.jsx
+│     ├─ PreviousBookings.jsx
+│     ├─ Profile.jsx
+│     └─ Services.jsx
+├─ tailwind.config.js
+├─ vercel.json
+└─ vite.config.js
+
+```
