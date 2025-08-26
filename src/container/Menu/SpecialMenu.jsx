@@ -8,8 +8,6 @@ AOS.init({
 import { MenuItem } from "../../components";
 import { data, images } from "../../constants";
 
-import "./SpecialMenu.css";
-
 const SpecialMenu = () => (
   <div className="bg-[#090909] flex flex-col jusify-center items-center py-16 px-8 sm:p-16 lg:py-16 lg:px-24" id="menu">
     <div className="mb-8 text-center" data-aos="fade-down">
