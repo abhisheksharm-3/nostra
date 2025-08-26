@@ -1,5 +1,4 @@
-import React from "react";
-
+/* eslint-disable react/prop-types */
 import { SubHeading } from "../../components";
 import { images, data } from "../../constants";
 import "./Laurels.css";

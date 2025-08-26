@@ -1,4 +1,3 @@
-import React from "react";
 import { images } from "../../constants";
 
 import AOS from 'aos';
@@ -7,8 +6,6 @@ AOS.init({
   duration: 1000,
   offset: 100,
 });
-
-import "./AboutUs.css";
 
 const AboutUs = () => (
   <div
@@ -20,7 +17,7 @@ const AboutUs = () => (
         <h1 className="font-serif text-[#ACACAC] text-[45px] lg:text-[68px] leading-[70px] lg:leading-[83.2px] tracking-[0.04em] uppercase">About Us</h1>
         <img src={images.spoon} alt="about_spoon" className="w-[45px]" />
         <p className="my-8 mx-0 text-[#545454] font-sans font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">
-          Indulge in Nostra's elegant and minimalist culinary experience, where
+          Indulge in Nostra&apos;s elegant and minimalist culinary experience, where
           flavors unfold untold stories. Enter our enchanting realm of masterful
           dishes, igniting your senses and creating lasting memories. Immerse
           yourself in our fine dining reimagined, where craftsmanship meets
@@ -41,7 +38,7 @@ const AboutUs = () => (
         <h1 className="font-serif text-[#ACACAC] text-[45px] lg:text-[68px] leading-[70px] lg:leading-[83.2px] tracking-[0.04em] uppercase">Our History</h1>
         <img src={images.spoon} alt="about_spoon" className="w-[45px]" />
         <p className="my-8 mx-0 text-[#545454] font-sans font-normal tracking-[0.04em] uppercase text-[16px] leading-[28px]">
-          Nostra's history is one of redefining fine dining with an air of
+          Nostra&apos;s history is one of redefining fine dining with an air of
           intrigue. Our visionary team, driven by passion and creativity, crafts
           dishes that awaken the senses and tell a story. Join us on a journey
           of culinary exploration and experience the magic that is Nostra.

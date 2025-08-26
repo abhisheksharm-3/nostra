@@ -1,7 +1,3 @@
-import React from 'react';
-
-import SubHeading from '../SubHeading/SubHeading';
-
 import { images } from '../../constants';
 
 import './Newsletter.css';

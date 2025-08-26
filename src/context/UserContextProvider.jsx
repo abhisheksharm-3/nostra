@@ -1,4 +1,5 @@
-import React, { useContext, useState, useEffect } from "react";
+/* eslint-disable react/prop-types */
+import { useContext, useState, useEffect } from "react";
 import UserContext from "./UserContext";
 import { account } from "../appwrite/appwriteConfig";
 

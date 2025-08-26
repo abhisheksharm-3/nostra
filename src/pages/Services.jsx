@@ -1,4 +1,3 @@
-import React from 'react'
 import { HeaderImage, Navbar, } from '../components'
 import { ServiceQuality, HappyHours, MenuPage, Footer } from '../container'
 

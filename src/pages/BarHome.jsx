@@ -1,4 +1,3 @@
-import React from 'react'
 import { Navbar, BarHeader } from '../components'
 
 import { Footer, HappyHours, SpecialMenu,  FindUs, AboutBar, Poison } from '../container'

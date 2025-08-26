@@ -14,8 +14,6 @@ AOS.init({
   offset: 100,
 });
 
-import "./Gallery.css";
-
 const Gallery = () => {
   const scrollRef = React.useRef(null);
 
