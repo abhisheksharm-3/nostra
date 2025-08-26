@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ConfettiExplosion from 'react-confetti-explosion';
 
-const Thanks = (props) => {
+const Thanks = () => {
   const location = useLocation();
   const propsData = location.state;
   const [qrCodeURL, setQRCodeURL] = useState("");

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { HeaderImage, Navbar } from '../components'
 import { Footer, Chef, Testimonials, Gallery, Stats, InfoVideo } from '../container'
 

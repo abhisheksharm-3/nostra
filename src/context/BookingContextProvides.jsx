@@ -1,4 +1,5 @@
-import React, { useContext, useState, useEffect } from "react";
+/* eslint-disable react/prop-types */
+import { useContext, useState, useEffect } from "react";
 import BookingsContext from "./BookingContext";
 import { database } from "../appwrite/appwriteConfig";
 import { ID, Query } from "appwrite";

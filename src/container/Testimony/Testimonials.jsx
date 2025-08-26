@@ -1,5 +1,3 @@
-import React from "react";
-
 import { images } from "../../constants";
 
 const Testimonials = () => {
@@ -45,7 +43,7 @@ const Testimonials = () => {
             <img src={images.c2} alt="" />
             <div className="flex flex-col justify-center items-center lg:items-start mt-8 lg:mt-0 lg:ml-8">
               <p className="font-serif text-[#ACACAC] font-normal tracking-[0.04em] capitalize text-[16px] leading-[28px] text-center lg:text-left">
-                Nostra's captivating ambiance, exceptional service, and
+                Nostra&apos;s captivating ambiance, exceptional service, and
                 exquisite flavors make it a standout destination for discerning
                 diners.
               </p>

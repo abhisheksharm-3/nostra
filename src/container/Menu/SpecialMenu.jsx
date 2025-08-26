@@ -1,5 +1,3 @@
-import React from "react";
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init({
@@ -7,7 +5,7 @@ AOS.init({
   offset: 100,
 });
 
-import { SubHeading, MenuItem } from "../../components";
+import { MenuItem } from "../../components";
 import { data, images } from "../../constants";
 
 import "./SpecialMenu.css";

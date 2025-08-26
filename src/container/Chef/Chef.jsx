@@ -1,8 +1,5 @@
-import React from "react";
-
 import { SubHeading } from "../../components";
 import { images } from "../../constants";
-import "./Chef.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init({

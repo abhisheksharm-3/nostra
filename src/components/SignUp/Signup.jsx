@@ -59,7 +59,7 @@ const Signup = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     if (email && password) {
-      const promise = await user.login(email, password);
+      await user.login(email, password);
       navigate("/profile");
     } else {
       toast.error("Please enter both email and password.");
@@ -67,7 +67,7 @@ const Signup = () => {
   };
   const googleLogin = async (e) => {
     e.preventDefault();
-    const promise = await account.createOAuth2Session(
+    await account.createOAuth2Session(
       "google",
       `${import.meta.env.VITE_DOMAIN}/profile`,
       `${import.meta.env.VITE_DOMAIN}/userauth`
